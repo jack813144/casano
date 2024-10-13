@@ -21,8 +21,7 @@ public class UserMapperImpl implements UserMapper {
         return UserDTO.builder()
                 .id(entity.getId())
                 .userName(entity.getUserName())
-                .firstName(entity.getFirstName())
-                .lastName(entity.getLastName())
+                .email(entity.getEmail())
                 .build();
     }
 
@@ -45,10 +44,7 @@ public class UserMapperImpl implements UserMapper {
         }
         User entity = new User();
         entity.setUserName(request.getUserName());
-        entity.setFirstName(request.getFirstName());
-        entity.setLastName(request.getLastName());
         entity.setEmail(request.getEmail());
-        entity.setPassword(request.getPassword());
         return entity;
     }
 }
