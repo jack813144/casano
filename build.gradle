@@ -5,7 +5,6 @@ plugins {
 }
 
 group = 'com.company.car'
-version = '0.0.1-SNAPSHOT'
 
 java {
 	toolchain {
@@ -36,4 +35,12 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+bootJar {
+	// Nếu bạn chỉ muốn tạo một file JAR thực thi duy nhất
+	enabled = true
+}
+jar {
+	// Nếu bạn không muốn tạo file JAR plain
+	enabled = false
 }
